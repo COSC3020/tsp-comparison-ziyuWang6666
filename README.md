@@ -23,3 +23,14 @@ Local Search found. Why is this?
 
 Add the code to run your experiments, graphs, and an explanation of what you did
 to this markdown file.
+
+#### process
+I have included the tsp_hk from the Held-Karp TSP homework and tsp_ls from the local research assignment. Each main running function is wrapped with a timer to measure the results for different matrix sizes: 5x5, 10x10, 15x15, 20x20, and 30x30.
+
+While the worst-case time analysis for the implemented TSP local research is $O(n^3)$, the TSP Held-Karp implementation has a worst runtime of $O(n^2 * 2^n)$. I am aware that the Held-Karp algorithm's runtime increases significantly with larger matrix sizes. 
+
+In my experiments, I noticed that Held-Karp produces immediate results equal to or less than a matrix size of 15x15. However, when the matrix size reaches 20x20, it runs for more than 3 hours, suggesting a potential issue in the algorithm implementation leading to such extended runtimes. Unfortunately, I was unable to obtain around results for a 30x30 matrix using the Held-Karp algorithm. As a result, I marked approximately 3.03 hours on the image, causing the endpoint of the red line for tsp_hk to be positioned beyond 3 hours, rather than reaching zero for the 30x30 matrix. While I acknowledge that this representation may not be entirely accurate, it does signify that the runtime of the Held-Karp algorithm for a 30x30 matrix is not zero.
+
+In contrast, the TSP local research algorithm consistently exhibits smooth and fast execution, with short running times for each test.
+
+
